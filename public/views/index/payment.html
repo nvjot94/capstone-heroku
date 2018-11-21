@@ -1,0 +1,86 @@
+<div id="cart">
+        <div class="container-fluid">
+            <div class="cart-list">
+                <h3>ORDER SUMMARY AND PAYMENT INFORMATION</h3>
+                <hr>
+                <div class="cart-product">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="product-image">
+                                <img src="../images/mobile.png" class="img-responsive" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-nam e">
+                                <p>Redmi note 3 (32 Gb)</p>
+                            </div>
+                            <div class="product-price">
+                                <p>Rs : 10,200</p>
+                            </div>
+                            <div class="short-desc">
+                                <ul>
+                                    <li>Size :
+                                        <span>5.5 Inches</span>
+                                    </li>
+                                    <li>Color :
+                                        <span>Black</span>
+                                    </li>
+                                    <li>Memory :
+                                        <span>3Gb, 32Gb</span>
+                                    </li>
+                                    <li>Battery :
+                                        <span>4000 Mah</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="in-stock">
+                                <P>In Stock :
+                                    <span>2 piece</span>
+                                </P>
+                            </div>
+                            <div class="quantity">
+                                <label for="">Quanity : </label>
+                                <input type="number" name="quantity" class="form-control" value="1">
+                            </div>
+                            <div class="remove-product">
+                                <a href="#">Delete Product</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-product" >
+                    <div class="row">
+                        <div >
+                            <div class="product-image">
+                                <img ng-src={{details.imageUrl}} class="img-responsive" width="300px" alt="">
+                            </div>
+                        </div>
+                        <div >
+                            <div class="product-name">
+                                <h2 ng-bind="details.text"></h2>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="total-price">
+                <div class="row">
+                    <div class="col-md-offset-8 col-md-4">
+                        <p>Subtotal
+                            <span>(4 Items) :</span>
+                            <span>10,000</span>
+                        </p>
+                        
+                    </div>
+                    <div >
+                            <h3>Payment Options</h3>
+                            
+                                <button class="paybtn" ng-click="getHash()">payumoney</button>
+                                <button class="paybtn">payTm</button>
+                                <button class="paybtn">Mobiquick</button>
+                            
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>

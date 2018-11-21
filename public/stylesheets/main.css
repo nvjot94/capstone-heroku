@@ -1,0 +1,25 @@
+.apperror{
+    color:red;
+    font-style: italic;
+}
+input.ng-invalid{
+    border-width: 2px;
+    border-style: solid;
+} 
+input.ng-valid{
+    /*border-color:green;*/
+    border-width: 2px;
+    border-style: solid;
+} 
+/*input.ng-invalid-pattern{
+    border-color:orange;
+    border-width: 5px;
+    border-style: solid;
+}*/
+ input[type="text"]{
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 4px;
+    height: 42px;
+}

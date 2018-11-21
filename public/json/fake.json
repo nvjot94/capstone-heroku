@@ -1,0 +1,271 @@
+{
+    "_id": "5a7a92128155ec0a8c09a3a7",
+    "carouselurls": [
+        "https://rukminim1.flixcart.com/flap/3376/560/image/3922e5.jpg?q=50",
+        "https://rukminim1.flixcart.com/flap/3376/560/image/1247d1.jpg?q=50",
+        "https://rukminim1.flixcart.com/flap/3376/560/image/2a58be.jpg?q=50"
+    ],
+    "categories": [{
+            "name": "Electronics",
+            "subcategories": [{
+                    "name": "Mobiles",
+                    "imageurl": "http://static1.squarespace.com/static/58942978be6594ef24dafc8f/58f882d2579fb38c56a422b6/5910c6636b8f5b27e1375ed0/1508411878103/Samsung+Grand+Prime.png?format=1000w",
+                    "brands": [
+                        "Asus",
+                        "Lenovo",
+                        "Dell",
+                        "Apple",
+                        "HP"
+                    ]
+                },
+                {
+                    "name": "Laptops",
+                    "imageurl": "https://cdn.shopify.com/s/files/1/1352/4221/products/HP_Notebook_-_15g-br010tx_Laptop-01_1024x1024.png?v=1503577119",
+                    "brands": [
+                        "Asus",
+                        "Lenovo",
+                        "Dell",
+                        "Apple",
+                        "HP"
+                    ]
+                },
+                {
+                    "name": "Refrigerators",
+                    "imageurl": "https://www.margarethirsch.co.za/wp-content/uploads/2016/02/SAMSUNG-SPARKLING-WATER-FRIDGE.png",
+                    "brands": [
+                        "Sandisk",
+                        "Kingston",
+                        "Transcend",
+                        "Samsung",
+                        "Sony",
+                        "Strontium",
+                        "mi"
+                    ]
+                },
+                {
+                    "name": "Gaming Consoles",
+                    "imageurl": "https://www.systemco.net/6231/xbox-360-wireless-manette.jpg",
+                    "brands": [
+                        "wastern digital",
+                        "Samsung",
+                        "transcend",
+                        "toshiba"
+                    ]
+                },
+                {
+                    "name": "Mobiles",
+                    "imageurl": "http://static1.squarespace.com/static/58942978be6594ef24dafc8f/58f882d2579fb38c56a422b6/5910c6636b8f5b27e1375ed0/1508411878103/Samsung+Grand+Prime.png?format=1000w",
+                    "brands": [
+                        "Asus",
+                        "Lenovo",
+                        "Dell",
+                        "Apple",
+                        "HP"
+                    ]
+                },
+                {
+                    "name": "Laptops",
+                    "imageurl": "https://cdn.shopify.com/s/files/1/1352/4221/products/HP_Notebook_-_15g-br010tx_Laptop-01_1024x1024.png?v=1503577119",
+                    "brands": [
+                        "Asus",
+                        "Lenovo",
+                        "Dell",
+                        "Apple",
+                        "HP"
+                    ]
+                },
+                {
+                    "name": "Refrigerators",
+                    "imageurl": "https://www.margarethirsch.co.za/wp-content/uploads/2016/02/SAMSUNG-SPARKLING-WATER-FRIDGE.png",
+                    "brands": [
+                        "Sandisk",
+                        "Kingston",
+                        "Transcend",
+                        "Samsung",
+                        "Sony",
+                        "Strontium",
+                        "mi"
+                    ]
+                },
+                {
+                    "name": "Gaming Consoles",
+                    "imageurl": "https://www.systemco.net/6231/xbox-360-wireless-manette.jpg",
+                    "brands": [
+                        "wastern digital",
+                        "Samsung",
+                        "transcend",
+                        "toshiba"
+                    ]
+                },
+                {
+                    "name": "Mobiles",
+                    "imageurl": "http://static1.squarespace.com/static/58942978be6594ef24dafc8f/58f882d2579fb38c56a422b6/5910c6636b8f5b27e1375ed0/1508411878103/Samsung+Grand+Prime.png?format=1000w",
+                    "brands": [
+                        "Asus",
+                        "Lenovo",
+                        "Dell",
+                        "Apple",
+                        "HP"
+                    ]
+                },
+                {
+                    "name": "Laptops",
+                    "imageurl": "https://cdn.shopify.com/s/files/1/1352/4221/products/HP_Notebook_-_15g-br010tx_Laptop-01_1024x1024.png?v=1503577119",
+                    "brands": [
+                        "Asus",
+                        "Lenovo",
+                        "Dell",
+                        "Apple",
+                        "HP"
+                    ]
+                },
+                {
+                    "name": "Refrigerators",
+                    "imageurl": "https://www.margarethirsch.co.za/wp-content/uploads/2016/02/SAMSUNG-SPARKLING-WATER-FRIDGE.png",
+                    "brands": [
+                        "Sandisk",
+                        "Kingston",
+                        "Transcend",
+                        "Samsung",
+                        "Sony",
+                        "Strontium",
+                        "mi"
+                    ]
+                },
+                {
+                    "name": "Gaming Consoles",
+                    "imageurl": "https://www.systemco.net/6231/xbox-360-wireless-manette.jpg",
+                    "brands": [
+                        "wastern digital",
+                        "Samsung",
+                        "transcend",
+                        "toshiba"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Clothing",
+            "subcategories": [{
+                    "name": "men",
+                    "imageurl": "https://frgirlsoftexas.com/wp-content/uploads/2015/05/DF2-CM-446TS-desert-sand.jpg",
+                    "brands": [
+                        "Roadster",
+                        "USPolo",
+                        "Blackberry"
+                    ]
+                },
+                {
+                    "name": "women ",
+                    "imageurl": "https://img.wikinut.com/img/3b9mjcujfriqo7gg/jpeg/0/women-clothing.jpeg",
+                    "brands": [
+                        "Bitterlime",
+                        "Next",
+                        "Harvard"
+                    ]
+                },
+                {
+                    "name": "children",
+                    "imageurl": "http://www.newkidscenter.com/images/10404307/c4c6e34fc8b60f574ebfc8c361d03723.jpg",
+                    "brands": [
+                        "Kittens",
+                        "Ninos",
+                        "Kangaroos"
+                    ]
+                },
+                {
+                    "name": "latests",
+                    "imageurl": "http://1.bp.blogspot.com/-uIrOEtp86tw/VGXODURys-I/AAAAAAAAA9U/iHGCF3v86Do/s1600/dolha.jpg",
+                    "brands": [
+                        "USPolo",
+                        "Next",
+                        "Kangaroos"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Footwear",
+            "subcategories": [{
+                    "name": "men",
+                    "imageurl": "http://bata.in/blog/wp-content/uploads/2017/04/Collage-boat.jpg",
+                    "brands": [
+                        "Nike",
+                        "Adidas",
+                        "Reebok"
+                    ]
+                },
+                {
+                    "name": "women",
+                    "imageurl": "http://www.celebritystyleweddings.com/wp-content/uploads/2014/04/Neon-Pink-Patent-Leather-Sandal-800x600.png",
+                    "brands": [
+                        "Nike",
+                        "Adidas",
+                        "Reebok"
+                    ]
+                },
+                {
+                    "name": "children",
+                    "imageurl": "http://uttarakhandbazaar.com/ShopImage/babashoes1.jpg",
+                    "brands": [
+                        "Puma",
+                        "Lotto",
+                        "Fila"
+                    ]
+                },
+                {
+                    "name": "latest",
+                    "imageurl": "http://2.bp.blogspot.com/-OT-CMwuua5w/UG1jLxNaYKI/AAAAAAAAAJU/THykdQ5SRkE/s1600/footwear_report-2.jpg",
+                    "brands": [
+                        "Woodland",
+                        "Puma",
+                        "Nike"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Cars",
+            "subcategories": [{
+                    "name": "suv",
+                    "imageurl": "https://imgct2.aeplcdn.com/img/800x600/car-data/big/hyundai-creta-default-image.png-version201802081710.png?v=15",
+                    "brands": [
+                        "Hyundai",
+                        "Maruti",
+                        "Honda",
+                        "Audi"
+                    ]
+                },
+                {
+                    "name": "sedan",
+                    "imageurl": "http://gadi4u.com/assets/media/_2.0_LT_MT/Chevrolet_Cruze.png",
+                    "brands": [
+                        "Hyundai",
+                        "Maruti",
+                        "Honda",
+                        "Audi"
+                    ]
+                },
+                {
+                    "name": "small",
+                    "imageurl": "https://imgct2.aeplcdn.com/img/800x600/car-data/big/tata-bolt-image-9609.png?v=15",
+                    "brands": [
+                        "Tata",
+                        "Hyundai",
+                        "Volkswagen"
+                    ]
+                },
+                {
+                    "name": "luxury",
+                    "imageurl": "https://imgct2.aeplcdn.com/img/800x600/car-data/big/bmw-i8-default-image.png-version201802081710.png?v=15",
+                    "brands": [
+                        "Hyundai",
+                        "Maruti",
+                        "Honda",
+                        "Audi"
+                    ]
+                }
+            ]
+        }
+    ]
+}

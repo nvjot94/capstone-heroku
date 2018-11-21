@@ -1,0 +1,549 @@
+{
+    "mobiles": [{
+            "_id": "5an76b7618c649c32dcc54689",
+            "productid": "",
+            "name": "Mi Note 4",
+            "imgUrl": "https://www.91-img.com/pictures/xiaomi-mi-a1-mobile-phone-large-1.jpg",
+            "shortdescription": [
+                "4gb",
+                "64gb",
+                "8core"
+            ],
+            "stock": "",
+            "status": "",
+            "category": "",
+            "subcategory": "",
+            "set": "",
+            "variants": [
+                "productid2",
+                "productid3"
+            ],
+            "purchaseprice": "10000",
+            "sellingprice": "",
+            "mrp": "",
+            "tax": "",
+            "description": "",
+            "images": [
+                "imageurl1",
+                "imageurl2",
+                "imageurl3"
+            ],
+            "maximumquantitylimit": "",
+            "specification": [{
+                    "keyname": "key1",
+                    "value": "value1"
+                },
+                {
+                    "keyname": "key2",
+                    "value": "value2"
+                },
+                {
+                    "keyname": "key3",
+                    "value": "value2"
+                },
+                {
+                    "keyname": "key4",
+                    "value": "value4"
+                }
+            ],
+            "averagerating": "",
+            "creationdate": "1999-12-31T18:30:00.000Z",
+            "modificationdate": "1999-12-31T18:30:00.000Z",
+            "reviews": [{
+                    "rating": "",
+                    "review": "",
+                    "description": "",
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z"
+                },
+                {
+                    "rating": "",
+                    "review": "",
+                    "description": "",
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z"
+                }
+            ],
+            "faq": [{
+                "question": "",
+                "by": "",
+                "time": "1999-12-31T18:30:00.000Z",
+                "upvote": "",
+                "downvote": "",
+                "answers": [{
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z",
+                    "description": ""
+                }]
+            }]
+        },
+        {
+            "_id": "5a76b7618c649c32dcc54689",
+            "productid": "",
+            "name": "Samsung S8",
+            "shortdescription": [
+                "2gb",
+                "61gb",
+                "4core"
+            ],
+            "imgUrl": "https://www.91-img.com/pictures/xiaomi-mi-a1-mobile-phone-large-1.jpg",
+            "stock": "",
+            "status": "",
+            "category": "",
+            "subcategory": "",
+            "set": "",
+            "variants": [
+                "productid2",
+                "productid3"
+            ],
+            "purchaseprice": "15000",
+            "sellingprice": "",
+            "mrp": "",
+            "tax": "",
+            "description": "",
+            "images": [
+                "imageurl1",
+                "imageurl2",
+                "imageurl3"
+            ],
+            "maximumquantitylimit": "",
+            "specification": [{
+                    "keyname": "key1",
+                    "value": "value1"
+                },
+                {
+                    "keyname": "key2",
+                    "value": "value2"
+                },
+                {
+                    "keyname": "key3",
+                    "value": "value2"
+                },
+                {
+                    "keyname": "key4",
+                    "value": "value4"
+                }
+            ],
+            "averagerating": "",
+            "creationdate": "1999-12-31T18:30:00.000Z",
+            "modificationdate": "1999-12-31T18:30:00.000Z",
+            "reviews": [{
+                    "rating": "",
+                    "review": "",
+                    "description": "",
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z"
+                },
+                {
+                    "rating": "",
+                    "review": "",
+                    "description": "",
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z"
+                }
+            ],
+            "faq": [{
+                "question": "",
+                "by": "",
+                "time": "1999-12-31T18:30:00.000Z",
+                "upvote": "",
+                "downvote": "",
+                "answers": [{
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z",
+                    "description": ""
+                }]
+            }]
+        },
+        {
+            "_id": "5a76b7618c649c32dcc54689",
+            "productid": "",
+            "name": "Iphone 6s",
+            "shortdescription": [
+                "8gb",
+                "32gb",
+                "16core"
+            ],
+            "imgUrl": "https://www.91-img.com/pictures/xiaomi-mi-a1-mobile-phone-large-1.jpg",
+            "stock": "",
+            "status": "",
+            "category": "",
+            "subcategory": "",
+            "set": "",
+            "variants": [
+                "productid2",
+                "productid3"
+            ],
+            "purchaseprice": "12345",
+            "sellingprice": "",
+            "mrp": "",
+            "tax": "",
+            "description": "",
+            "images": [
+                "imageurl1",
+                "imageurl2",
+                "imageurl3"
+            ],
+            "maximumquantitylimit": "",
+            "specification": [{
+                    "keyname": "key1",
+                    "value": "value1"
+                },
+                {
+                    "keyname": "key2",
+                    "value": "value2"
+                },
+                {
+                    "keyname": "key3",
+                    "value": "value2"
+                },
+                {
+                    "keyname": "key4",
+                    "value": "value4"
+                }
+            ],
+            "averagerating": "",
+            "creationdate": "1999-12-31T18:30:00.000Z",
+            "modificationdate": "1999-12-31T18:30:00.000Z",
+            "reviews": [{
+                    "rating": "",
+                    "review": "",
+                    "description": "",
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z"
+                },
+                {
+                    "rating": "",
+                    "review": "",
+                    "description": "",
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z"
+                }
+            ],
+            "faq": [{
+                "question": "",
+                "by": "",
+                "time": "1999-12-31T18:30:00.000Z",
+                "upvote": "",
+                "downvote": "",
+                "answers": [{
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z",
+                    "description": ""
+                }]
+            }]
+        },
+        {
+            "_id": "5a76b7618c649c32dcc54689",
+            "productid": "Mi 3",
+            "name": "",
+            "shortdescription": [
+                "4gb",
+                "64gb",
+                "retina-display"
+            ],
+            "imgUrl": "https://www.91-img.com/pictures/xiaomi-mi-a1-mobile-phone-large-1.jpg",
+            "stock": "",
+            "status": "",
+            "category": "",
+            "subcategory": "",
+            "set": "",
+            "variants": [
+                "productid2",
+                "productid3"
+            ],
+            "purchaseprice": "78904",
+            "sellingprice": "",
+            "mrp": "",
+            "tax": "",
+            "description": "",
+            "images": [
+                "imageurl1",
+                "imageurl2",
+                "imageurl3"
+            ],
+            "maximumquantitylimit": "",
+            "specification": [{
+                    "keyname": "key1",
+                    "value": "value1"
+                },
+                {
+                    "keyname": "key2",
+                    "value": "value2"
+                },
+                {
+                    "keyname": "key3",
+                    "value": "value2"
+                },
+                {
+                    "keyname": "key4",
+                    "value": "value4"
+                }
+            ],
+            "averagerating": "",
+            "creationdate": "1999-12-31T18:30:00.000Z",
+            "modificationdate": "1999-12-31T18:30:00.000Z",
+            "reviews": [{
+                    "rating": "",
+                    "review": "",
+                    "description": "",
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z"
+                },
+                {
+                    "rating": "",
+                    "review": "",
+                    "description": "",
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z"
+                }
+            ],
+            "faq": [{
+                "question": "",
+                "by": "",
+                "time": "1999-12-31T18:30:00.000Z",
+                "upvote": "",
+                "downvote": "",
+                "answers": [{
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z",
+                    "description": ""
+                }]
+            }]
+        },
+        {
+            "_id": "5a76b7618c649c32dcc54689",
+            "productid": "Iphone X",
+            "name": "",
+            "shortdescription": [
+                "12gb",
+                "32gb",
+                "gorilla glass"
+            ],
+            "imgUrl": "https://www.91-img.com/pictures/xiaomi-mi-a1-mobile-phone-large-1.jpg",
+            "stock": "",
+            "status": "",
+            "category": "",
+            "subcategory": "",
+            "set": "",
+            "variants": [
+                "productid2",
+                "productid3"
+            ],
+            "purchaseprice": "56873",
+            "sellingprice": "",
+            "mrp": "",
+            "tax": "",
+            "description": "",
+            "images": [
+                "imageurl1",
+                "imageurl2",
+                "imageurl3"
+            ],
+            "maximumquantitylimit": "",
+            "specification": [{
+                    "keyname": "key1",
+                    "value": "value1"
+                },
+                {
+                    "keyname": "key2",
+                    "value": "value2"
+                },
+                {
+                    "keyname": "key3",
+                    "value": "value2"
+                },
+                {
+                    "keyname": "key4",
+                    "value": "value4"
+                }
+            ],
+            "averagerating": "",
+            "creationdate": "1999-12-31T18:30:00.000Z",
+            "modificationdate": "1999-12-31T18:30:00.000Z",
+            "reviews": [{
+                    "rating": "",
+                    "review": "",
+                    "description": "",
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z"
+                },
+                {
+                    "rating": "",
+                    "review": "",
+                    "description": "",
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z"
+                }
+            ],
+            "faq": [{
+                "question": "",
+                "by": "",
+                "time": "1999-12-31T18:30:00.000Z",
+                "upvote": "",
+                "downvote": "",
+                "answers": [{
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z",
+                    "description": ""
+                }]
+            }]
+        },
+        {
+            "_id": "5a76b7618c649c32dcc54689",
+            "productid": "Samsung Note 8",
+            "name": "",
+            "shortdescription": [
+                "4gb",
+                "64gb",
+                "8core"
+            ],
+            "imgUrl": "https://www.91-img.com/pictures/xiaomi-mi-a1-mobile-phone-large-1.jpg",
+            "stock": "",
+            "status": "",
+            "category": "",
+            "subcategory": "",
+            "set": "",
+            "variants": [
+                "productid2",
+                "productid3"
+            ],
+            "purchaseprice": "18166",
+            "sellingprice": "",
+            "mrp": "",
+            "tax": "",
+            "description": "",
+            "images": [
+                "imageurl1",
+                "imageurl2",
+                "imageurl3"
+            ],
+            "maximumquantitylimit": "",
+            "specification": [{
+                    "keyname": "key1",
+                    "value": "value1"
+                },
+                {
+                    "keyname": "key2",
+                    "value": "value2"
+                },
+                {
+                    "keyname": "key3",
+                    "value": "value2"
+                },
+                {
+                    "keyname": "key4",
+                    "value": "value4"
+                }
+            ],
+            "averagerating": "",
+            "creationdate": "1999-12-31T18:30:00.000Z",
+            "modificationdate": "1999-12-31T18:30:00.000Z",
+            "reviews": [{
+                    "rating": "",
+                    "review": "",
+                    "description": "",
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z"
+                },
+                {
+                    "rating": "",
+                    "review": "",
+                    "description": "",
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z"
+                }
+            ],
+            "faq": [{
+                "question": "",
+                "by": "",
+                "time": "1999-12-31T18:30:00.000Z",
+                "upvote": "",
+                "downvote": "",
+                "answers": [{
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z",
+                    "description": ""
+                }]
+            }]
+        },
+        {
+            "_id": "5a76b7618c649c32dcc54689",
+            "productid": "Mi 4",
+            "name": "",
+            "shortdescription": [
+                "2gb",
+                "128gb",
+                "4core"
+            ],
+            "imgUrl": "https://www.91-img.com/pictures/xiaomi-mi-a1-mobile-phone-large-1.jpg",
+            "stock": "",
+            "status": "",
+            "category": "",
+            "subcategory": "",
+            "set": "",
+            "variants": [
+                "productid2",
+                "productid3"
+            ],
+            "purchaseprice": "12345",
+            "sellingprice": "",
+            "mrp": "",
+            "tax": "",
+            "description": "",
+            "images": [
+                "imageurl1",
+                "imageurl2",
+                "imageurl3"
+            ],
+            "maximumquantitylimit": "",
+            "specification": [{
+                    "keyname": "key1",
+                    "value": "value1"
+                },
+                {
+                    "keyname": "key2",
+                    "value": "value2"
+                },
+                {
+                    "keyname": "key3",
+                    "value": "value2"
+                },
+                {
+                    "keyname": "key4",
+                    "value": "value4"
+                }
+            ],
+            "averagerating": "",
+            "creationdate": "1999-12-31T18:30:00.000Z",
+            "modificationdate": "1999-12-31T18:30:00.000Z",
+            "reviews": [{
+                    "rating": "",
+                    "review": "",
+                    "description": "",
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z"
+                },
+                {
+                    "rating": "",
+                    "review": "",
+                    "description": "",
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z"
+                }
+            ],
+            "faq": [{
+                "question": "",
+                "by": "",
+                "time": "1999-12-31T18:30:00.000Z",
+                "upvote": "",
+                "downvote": "",
+                "answers": [{
+                    "by": "",
+                    "time": "1999-12-31T18:30:00.000Z",
+                    "description": ""
+                }]
+            }]
+        }
+    ]
+}

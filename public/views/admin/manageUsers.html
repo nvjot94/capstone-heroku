@@ -1,0 +1,283 @@
+<div>
+    <div class="users">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive"></div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr style="background-color: #ddd">
+                            <th scope="col">select</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Employee Id</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Designation</th>
+                            <th scope="col">Salary</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="user in admins">
+                            <td scope="col">
+                                <input type="radio" name="user" ng-click="getSelectedIndex(user.empId)">
+                            </td>
+                            <td ng-bind="user.name"></td>
+                            <td ng-bind="user.empId"></td>
+                            <td ng-bind="user.email"></td>
+                            <td ng-bind="user.designation"></td>
+                            <td ng-bind="user.salary"></td>
+                            <td ng-bind="user.phone"></td>
+                            <td ng-bind="user.address"></td>
+                            <td ng-bind="user.status"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addusermodal">Add New Admin</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#editusermodal" ng-click="view()">Edit Admin</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary  btn-block" data-toggle="modal" data-target="#viewusermodal" ng-click="view()">View Details</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary  btn-block" ng-click="delete()">Delete</button>
+            </div>
+        </div>
+        <div class="additem">
+            <div class="modal fade" id="addusermodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Add Product</h4>
+                        </div>
+                        <div class="modal-body addprod">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <form class="form-horizontal">
+                                        <div class="form-group">
+                                            <label for="" class="col-sm-3 control-label">Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="name">
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">Emp Id</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="id">
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">Email</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="email">
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">Designation</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="designation">
+                                            </div>
+
+                                        </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <form class="form-horizontal">
+                                        <div class="form-group">
+                                            <label for="" class="col-sm-3 control-label">Salary</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="salary">
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">contact</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="phone">
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">Address</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="address">
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">Status</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="status">
+                                            </div>
+
+                                        </div>
+
+                                    </form>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="addUser()">Add Admin</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="additem">
+            <div class="modal fade" id="viewusermodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Add Product</h4>
+                        </div>
+                        <div class="modal-body addprod">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <form class="form-horizontal">
+                                        <div class="form-group">
+                                            <label for="" class="col-sm-3 control-label">Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.name" readonly>
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">Emp Id</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.empId" readonly>
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">Email</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.email" readonly>
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">Designation</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.designation" readonly>
+                                            </div>
+
+                                        </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <form class="form-horizontal">
+                                        <div class="form-group">
+                                            <label for="" class="col-sm-3 control-label">Salary</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.salary" readonly>
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">contact</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.phone" readonly>
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">Address</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.address" readonly>
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">Status</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.status" readonly>
+                                            </div>
+
+                                        </div>
+
+
+                                    </form>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <!-- <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="addUser()">Save Edit</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="additem">
+            <div class="modal fade" id="editusermodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Add Product</h4>
+                        </div>
+                        <div class="modal-body addprod">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <form class="form-horizontal">
+                                        <div class="form-group">
+                                            <label for="" class="col-sm-3 control-label">Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.name">
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">Emp Id</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.empId">
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">Email</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.email">
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">Designation</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.designation">
+                                            </div>
+
+                                        </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <form class="form-horizontal">
+                                        <div class="form-group">
+                                            <label for="" class="col-sm-3 control-label">Salary</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.salary">
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">contact</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.phone">
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">Address</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.address">
+                                            </div>
+                                            <br>
+                                            <label for="" class="col-sm-3 control-label">Status</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" ng-model="viewObject.status">
+                                            </div>
+
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="addUser()">Save Edit</button>
+
+                                    </form>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

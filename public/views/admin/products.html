@@ -1,0 +1,181 @@
+<div class="admin-product-control">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-control" ng-model="selectedCategory" ng-change="addSubcategories()">
+                <option value="" disabled selected hidden>Choose Category</option>
+                <option ng-repeat="categoryname in categories" value="{{categoryname.category}}" ng-bind="categoryname.category"></option>
+
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select class="form-control" ng-model="selectedSubCategory" ng-change="addSubcategories()">
+                <option value="" disabled selected hidden>Choose Sub-Category</option>
+                <option ng-repeat="categoryname in subCategories" value="{{categoryname.subcategory}}" ng-bind="categoryname.subcategory"></option>
+            </select>
+        </div>
+        <!-- <div class="col-md-3">
+            <select name="" id="" class="form-control" ng-model="selectedSubset">
+                <option value="" disabled selected hidden>Choose Set</option>
+                <option value="">Samsung</option>
+                <option value="">Category 10</option>
+                <option value="">Category 11</option>
+                <option value="">Category 12</option>
+            </select>
+        </div> -->
+        <div class="col-md-4">
+            <button type="button" class="btn btn-default btn-block w-70" data-toggle="modal" data-target="#addproductmodal">Add New Product</button>
+        </div>
+    </div>
+
+    <div class="admin-product-list">
+        <div class="row" ng-repeat="product in productList">
+            <div >
+            <div class="col-md-2">
+                <div class="admin-product-image">
+                    <img ng-src="{{product.img}}" class="img-responsive" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="nav">
+                    <li ng-repeat="(key, value) in product" ng-if="key!='img'">
+                       {{key}}  : <span ng-bind="product[key]"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            <div class="col-md-3">
+                <button class="btn-default btn-block btn" data-target="#viewdetails" data-toggle="modal" ng-click="viewDetails(product.id)">View Product Details</button>
+                <button class="btn-default btn-block btn" data-target="#editproductmodal" data-toggle="modal" ng-click="edit(product.id)">Edit Product</button>
+                <button class="btn-default btn-block btn" ng-click="delete(product.id)">Delete Product</button>
+            </div>
+       
+        </div>
+    </div>
+
+    <div class="additem">
+        <div class="modal fade" id="addproductmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Add Product</h4>
+                    </div>
+                    <div class="modal-body addprod">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form class="form-horizontal">
+                                    <div class="form-group" ng-repeat="key in category.fields">
+                                        <label for="" class="col-sm-3 control-label" ng-bind="key.field"></label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="{{key.field}}" ng-blur="getValue(key.field)">
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <form class="form-horizontal">
+                                    <div class="form-group" ng-repeat="key in subCategoriesKey.sets">
+                                        <label for="" class="col-sm-3 control-label" ng-bind="key.field"></label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="{{key.field}}" ng-blur="getValue(key.field)">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="add()">Add Product</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="edititem">
+        <div class="modal fade" id="editproductmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Edit Product</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">ID :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="eid" readonly disabled>
+                                        </div>
+                                    </div>
+                                   
+
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Field 8 :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" ng-model="ef8">
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="saveEdit()">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="viewdetails">
+        <div class="modal fade" id="viewdetails" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Product Details</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="prd-image">
+                                    <img ng-src="viewProduct[img]" class="img-responsive"  alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <ul class="nav">
+                                <li ng-repeat="(key, value) in viewProduct" ng-if="key!='img'">
+                                    {{key}}  : <span ng-bind="viewProduct[key]"></span>
+                                 </li>
+                                </ul>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

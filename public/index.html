@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> flipkart </title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./stylesheets/font-awesome.min.css">
+    <link rel="stylesheet" href="./stylesheets/webslidemenu.css">
+    <link rel="stylesheet" href="./stylesheets/price-range.css">
+    <link rel="stylesheet" href="./stylesheets/product.css">
+    <!-- <link rel="stylesheet" href="./stylesheets/style.css"> -->
+    <link rel="stylesheet" href="./stylesheets/wishlist.css">
+    <link rel="stylesheet" href="./stylesheets/cart.css">
+    <link rel="stylesheet" href="./stylesheets/checkout.css">
+    <link rel="stylesheet" href="./stylesheets/myorders.css">
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script src="./bower_components/angular-route/angular-route.min.js"></script>
+    <script src="./../../bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="./bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+    <script src="./bower_components/ng-file-upload/ng-file-upload-shim.min.js"></script>
+    <script src="./js/menujs/ngStorage.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/config/routesConstants.js"></script>
+    <script src="./js/config/urlconfig.js"></script>
+    <script src="./js/factory/productsfactory.js"></script>
+    <script src="./js/factory/categoriesfactory.js"></script>
+    <script src="./js/factory/indexFactory.js"></script>
+    <script src="./js/controller/index/wishlistcontroller.js"></script>
+    <script src="./js/controller/index/cartcontroller.js"></script>
+    <script src="./js/controller/index/paymentController.js"></script>
+    <script src="./js/controller/index/chooseproductcontroller.js"></script>
+    <script src="./js/controller/index/productcontroller.js"></script>
+    <script src="./js/controller/index/categoriescontroller.js"></script>
+    <script src="./js/controller/index/indexController.js"></script>
+    <script src="./js/factory/indexFactory.js"></script>
+    <!-- <script src="./js/controller/indexController.js"></script> -->
+    <script src="./js/routes/index-routes.js"></script>
+</head>
+
+<body>
+    <div class="wrapper" ng-app="myapp" ng-controller="indexController">
+        <div class="wsmenucontainer clearfix">
+            <div id="overlapblackbg"></div>
+            <div class="wsmobileheader clearfix">
+                <a id="wsnavtoggle" class="animated-arrow">
+                    <span></span>
+                </a>
+                <div class="company-logo clearfix">
+                    <a class="smallogo">
+                        <img src="./images/logo.png" class="img-responsive" alt="">
+                        <p class="pull-right">flipkart</p>
+                    </a>
+
+                </div>
+            </div>
+            <div class="headerfull pm_buttoncolor blue-grdt">
+                <!--Main Menu HTML Code-->
+                <div class="wsmain">
+                    <div class="smllogo">
+                        <a href="#">
+                            <img src="./images/logo.png" alt="">
+                        </a>
+                    </div>
+                    <nav class="wsmenu clearfix">
+                        <ul class="mobile-sub wsmenu-list">
+                            <li>
+                                <a href="#" class="navtext">
+                                    <span>Shop By</span>
+                                    <span>Department</span>
+                                </a>
+                                <div class="wsshoptabing wtsdepartmentmenu clearfix">
+                                    <div class="wsshopwp clearfix">
+                                        <ul class="wstabitem clearfix">
+                                            <li class="wsshoplink-active" ng-repeat="menu in productdata.categories">
+                                                <a ng-href="#/categories/{{menu.name}}" ng-bind="menu.name">
+                                                    <i class="fa fa-laptop"></i>
+                                                </a>
+                                                <div class="wstitemright clearfix wstitemrightactive">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-lg-12 col-md-12 clearfix" ng-repeat="submenu in menu.subcategories">
+                                                                <a ng-href="#/products/{{submenu.name}}">
+                                                                    <div class="wstheading clearfix" ng-bind="submenu.name"></div>
+                                                                </a>
+                                                                <ul class="wstliststy01 clearfix">
+                                                                    <li ng-repeat="option in submenu.brands">
+                                                                        <a href="#" ng-bind="option"></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="navtext">
+                                    <span>Shop By</span>
+                                    <span>Brand</span>
+                                </a>
+                            </li>
+
+                            <li class="wssearchbar clearfix">
+                                <form class="topmenusearch">
+                                    <input placeholder="Search Product By Name, Category..." ng-model="searchbyname">
+                                    <button class="btnstyle">
+                                        <i class="searchicon fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                </form>
+                            </li>
+                            <li class="wscarticon clearfix">
+                                <a href="#/cart" ng-click="getCart()">
+                                    <i class="fa fa-shopping-basket"></i>
+                                    <em class="roundpoint" ng-if="cartCount>0" ng-bind="cartCount"></em>
+                                    <span class="mobiletext">Shopping Cart</span>
+                                </a>
+                            </li>
+
+                            <!-- ===============================My Account After Login===================================== -->
+                            <li class="wsshopmyaccount clearfix" ng-hide={{!uservalid}}>
+                                <a href="#" class="wtxaccountlink">
+                                    <i class="fa fa-align-justify"></i>My Account
+                                    <i class="fa  fa-angle-down"></i>
+                                </a>
+                                <ul class="wsmenu-submenu">
+                                    <li>
+                                        <a href="#/profile">
+                                            <i class="fa fa-black-tie"></i>View Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/myorders">
+                                            <i class="fa fa-first-order"></i>Orders</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-money"></i>Proceed to Payment</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/wishlist">
+                                            <i class="fa fa-heart"></i>My Favourites</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-bell"></i>Notification</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-question-circle"></i>Help Center</a>
+                                    </li>
+                                    <li ng-click="userLogout()">
+                                        <a href="#">
+                                            <i class="fa fa-sign-out"></i>Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ===============================ENd Of My Account After Login===================================== -->
+
+                            <!-- ===============================Login Modal Trigger=============================================== -->
+                            <li class="wsshopmyaccount clearfix">
+                                <a href="#" class="wtxaccountlink" data-toggle="modal" data-target="#LoginModal" ng-if="!uservalid">
+                                    <i class="fa fa-sign-in"></i> SignIn &amp; SignUp
+                                </a>
+                            </li>
+                            <!-- ===============================End of Login Modal Trigger========================================= -->
+
+                        </ul>
+                    </nav>
+                    <div class="smllogo comp-name">
+                        <a href="#" style="margin-left:30px;margin-top:20px">flipkart</a>
+                    </div>
+                </div>
+            </div>
+            <!--Menu HTML Code-->
+        </div>
+        <!--ENd of Content-->
+
+        <!-- ======================================Login Modal===================================== -->
+        <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" ng-delete=showModel>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header prm-color">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="login-form">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="myplaceholder">Enter mobile</div>
+                                        <input type="text" class="form-control myinput" required ng-model="mobilenumber">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="myplaceholder">Enter Password</div>
+                                        <input type="password" class="form-control myinput" required ng-model="password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-default loginbtn" ng-click="userLogin()">Login</button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <button ng-click="hideModel()" class="btn btn-default registerbtn" data-toggle="modal" data-target="#RegistrationModal">SignUp</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <label>Or Sign In With :</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <a href="#">
+                                            <i class="fa fa-google" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12 clearfix">
+                                        <a href="#" class="pull-right" data-toggle="modal" data-target="#ForgetPasswordModal" ng-click="hideModel()">Forget Password ?</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ===================================End of Login Modal======================================== -->
+
+        <!-- ===================================Start of Registration Modal ============================== -->
+        <div class="modal fade" id="RegistrationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header prm-color">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Registration Form</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="register-form">
+                            <form name="signup" class="form-horizontal" novalidate >
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="myplaceholder">Mobile Number</div>
+                                        <input type="text" class="form-control myinput" name="mobilenumber" ng-model="mob" ng-blur="checkExistence()">
+                                        <span ng-show="isThere">You are already registered!</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <button  class="btn btn-default display-block pull-right otp" ng-disabled="isThere" ng-click="genOtp()">Generate OTP</button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="myplaceholder">Enter OTP Here</div>
+                                        <input type="text" class="form-control myinput" ng-model="enteredOtp" ng-blur="verifyOtp()">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="myplaceholder"> type name here</div>
+                                        <input type="text" class="form-control myinput" ng-model="username">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="myplaceholder">Enter Password</div>
+                                        <input type="password" class="form-control myinput" ng-model="password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="myplaceholder">Confirm Password</div>
+                                        <input type="password" class="form-control myinput" ng-model="pwagain">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <button  class="btn btn-default display-block registerbtn" ng-disabled="isThere || !otpMatch" ng-click="signUpUser()">SignUp</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ====================================End of Registration Modal =========================== -->
+
+        <!-- ===================================Start of Forget Password Modal ============================== -->
+        <div class="modal fade" id="ForgetPasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header prm-color">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Recover Password</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="forgetpassword-form">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="myplaceholder">Enter Mobile Number</div>
+                                        <input type="text" class="form-control myinput" ng-model="mob">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-default display-block pull-right otp" ng-click="forgetPassword()">Generate OTP</button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="myplaceholder">Enter OTP Here</div>
+                                        <input type="text" class="form-control myinput"  ng-model="enteredOtp" ng-blur="verifyOtp()">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="myplaceholder">Enter Password</div>
+                                        <input type="password"  ng-model="pass"  class="form-control myinput">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="myplaceholder">Confirm Password</div>
+                                        <input type="password" class="form-control myinput">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-default display-block submit" ng-disabled="!otpMatch" ng-click="changePw()">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ====================================End of Forget Password Modal =========================== -->
+        <ng-view></ng-view>
+
+
+        <footer id="myFooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 myCols">
+                        <h5>Company Name / Location</h5>
+                        <ul>
+                            <li>
+                                <a href="#">Name of the Company</a>
+                            </li>
+                        </ul>
+                        <div class="location">
+                            <div class="nav-map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.863338632153!2d77.2888127439148!3d28.623292668741943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4ae2432f233%3A0x5b32c73d97685357!2sVinod+Nagar%2C+Block+B%2C+Block+D%2C+West+Vinod+Nagar%2C+Delhi%2C+110092!5e0!3m2!1sen!2sin!4v1502618627486"
+                                    width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-3 myCols">
+                        <h5>Customer Service</h5>
+                        <ul>
+                            <li>
+                                <a href="#">Help</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact us</a>
+                            </li>
+                            <li>
+                                <a href="#">My Account</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Terms of Use</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 myCols">
+                        <h5>About Us</h5>
+                        <ul>
+                            <li>
+                                <a href="#">Investors</a>
+                            </li>
+                            <li>
+                                <a href="#">Careers</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 myCols">
+                        <h5>Call Us</h5>
+                        <ul>
+                            <li>
+                                <a href="#">Phone Num</a>
+                            </li>
+                            <li>
+                                <a href="#">Timmings</a>
+                            </li>
+                            <li>
+                                <a href="#">Address</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="social-networks">
+                <a href="#" class="twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#" class="facebook">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+                <a href="#" class="google">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                <a href="#" class="google">
+                    <i class="fa fa-youtube"></i>
+                </a>
+                <a href="#" class="instagram">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2016 Copyright Text </p>
+            </div>
+        </footer>
+        </div>
+        <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./js/menujs/webslidemenu.js"></script>
+        <script src="./js/menujs/placeholder.js"></script>
+        <script src="./js/menujs/price-range.js"></script>
+        <script src="./js/menujs/custom.js"></script>
+        <script src="./js/menujs/jquery.zoom.min.js"></script>
+        <script id="bolt" src="https://sboxcheckout-static.citruspay.com/bolt/run/bolt.min.js" bolt- color="#32CD32" bolt-logo="http://technians.com/wp-content/uploads/2018/01/payu.jpg"></script>
+        <script>
+            $(function () {
+                $('.zoom').zoom({
+                    on: 'mouseover'
+                });
+            });
+
+        </script>
+
+</body>
+</html>

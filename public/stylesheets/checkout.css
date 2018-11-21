@@ -1,0 +1,11 @@
+#checkout .container {
+    background-color: white;
+}
+
+#checkout {
+    margin-top: 20px;
+}
+
+#checkout button {
+    margin-bottom: 20px;
+}

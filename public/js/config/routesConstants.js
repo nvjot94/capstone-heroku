@@ -1,0 +1,9 @@
+app.constant('HOME', '/');
+app.constant('PRODUCTS', '/products/:subcategory');
+app.constant('CHOOSEPRODUCT', '/chooseproduct/:subCategory/:productId');
+app.constant('CATEGORIES', '/categories/:categoryname');
+app.constant('WISHLIST', '/wishlist');
+app.constant('CART', '/cart');
+app.constant('PROFILE', '/profile');
+app.constant('MYORDERS', '/myorders');
+app.constant('PAYMENT', '/payment');

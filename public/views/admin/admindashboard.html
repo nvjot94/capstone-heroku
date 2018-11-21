@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href='./../../stylesheets/style.css'>
+    <!-- <link rel="stylesheet" href='./../../stylesheets/orders.css'>  -->
+    <script src="./../../bower_components/angular/angular.min.js"></script>
+    <script src="./../../bower_components/angular-route/angular-route.min.js"></script>
+    <script src="./../../js/menujs/ngStorage.min.js"></script>
+    <script src="./../../bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="./../../bower_components/ng-file-upload/ng-file-upload-shim.min.js"></script>
+    <script src="./../../bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+    <script src="../../bower_components/angular-route/angular-route.min.js"></script>
+    <script src="./../../js/app.js"></script>
+    <script src="./../../js/config/urlconfig.js"></script>
+    <script src="./../../js/factory/factory.js"></script>
+    <script src="./../../js/factory/indexFactory.js"></script>
+    <script src="./../../js/routes/admincrud-routes.js"></script>
+    <script src="./../../js/factory/item.js"></script>
+    <script src="./../../js/controller/admindashboard/productController.js"></script>
+    <script src="./../../js/controller/admindashboard/categoryController.js"></script>
+    <script src="./../../js/controller/admindashboard/manageusercontroller.js"></script>
+</head>
+
+<body ng-app="myapp">
+    <div class="admin-panel">
+        <div class="container-fluid">
+            <div class="col-md-2">
+                <div class="filter-control">
+                    <div class="sort-by-control">
+                        <div class="panel-group" id="accordian">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" class="accordian-toggle" data-parent="#accordian" data-target="#collapseOne">Sort By : </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div class="list-group" id="list1">
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-group" id="accordian">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" class="accordian-toggle" data-parent="#accordian" data-target="#collapseTwo">Filter By : </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div class="list-group" id="list1">
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-group" id="accordian">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" class="accordian-toggle" data-parent="#accordian" data-target="#collapseThree">Sort By : </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div class="list-group" id="list1">
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">First Filter
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-10">
+                <ul class="nav navbar-nav" style="display:block !important; width:100%">
+                    <li>
+                        <a ng-href="#/products">Product</a>
+                    </li>
+                    <li>
+                        <a ng-href="#/">Categories</a>
+                    </li>
+                    <li>
+                        <a ng-href="#/orders">Orders</a>
+                    </li>
+                    <li>
+                        <a ng-href="#/users">Manage users</a>
+                    </li>
+                </ul>
+                <ng-view></ng-view>
+                <!-- <div class="panel-control">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" ng-href="#/products">Product</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" ng-href="#/categories">Categories</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#menu2">Orders</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#menu3">Personal Details</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#menu4">Company Details</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#menu5">Account Details</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#menu6">Banking Details</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#menu7">Manage Users</a>
+                        </li>
+                    </ul>
+                    <ng-view></ng-view>
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active" ng-controller="productController">
+                            <div class="admin-product-control">
+                                <div class="row">
+                                    <div class="col-md-3" ng-controller="categoryController">
+                                        <select class="form-control" ng-model="selectedCategory">
+                                            <option ng-repeat="categoryname in categories" value="" ng-bind="categoryname.category"></option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <select name="" id="" class="form-control" ng-model="selectedSubCategory">
+                                            <option value="" disabled selected hidden>--Choose Sub-Category--</option>
+                                            <option value="">Mobiles</option>
+                                            <option value="">Category 6</option>
+                                            <option value="">Category 7</option>
+                                            <option value="">Category 8</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <select name="" id="" class="form-control" ng-model="selectedSubset">
+                                            <option value="" disabled selected hidden>--Choose Set--</option>
+                                            <option value="">Samsung</option>
+                                            <option value="">Category 10</option>
+                                            <option value="">Category 11</option>
+                                            <option value="">Category 12</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="button" class="btn btn-default btn-block w-70" data-toggle="modal" data-target="#addproductmodal">Add New Product</button>
+                                    </div>
+                                </div>
+
+                                <div class="admin-product-list">
+                                    <div class="row" ng-repeat="product in productList">
+                                        <div class="col-md-2">
+                                            <div class="admin-product-image">
+                                                <img ng-src="{{product.img}}" class="img-responsive" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <ul class="nav">
+                                                <li>ID :
+                                                    <span ng-bind="product.id"></span>
+                                                </li>
+                                                <li>Field 1 :
+                                                    <span ng-bind="product.f1"></span>
+                                                </li>
+                                                <li>Field 2 :
+                                                    <span ng-bind="product.f2"></span>
+                                                </li>
+                                                <li>Field 3 :
+                                                    <span ng-bind="product.f3"></span>
+                                                </li>
+                                                <li>Field 4 :
+                                                    <span ng-bind="product.f4"></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <ul class="nav">
+                                                <li>Field 5 :
+                                                    <span ng-bind="product.f5"></span>
+                                                </li>
+                                                <li>Field 6 :
+                                                    <span ng-bind="product.f6"></span>
+                                                </li>
+                                                <li>Field 7 :
+                                                    <span ng-bind="product.f7"></span>
+                                                </li>
+                                                <li>Field 8 :
+                                                    <span ng-bind="product.f8"></span>
+                                                </li>
+                                                <li>Field 9 :
+                                                    <span ng-bind="product.f9"></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <ul class="nav">
+                                                <li>Field 10 :
+                                                    <span ng-bind="product.f10"></span>
+                                                </li>
+                                                <li>Field 11 :
+                                                    <span ng-bind="product.f11"></span>
+                                                </li>
+                                                <li>Field 12 :
+                                                    <span ng-bind="product.f12"></span>
+                                                </li>
+                                                <li>Field 13 :
+                                                    <span ng-bind="product.f13"></span>
+                                                </li>
+                                                <li>Field 14 :
+                                                    <span ng-bind="product.f14"></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button class="btn-default btn-block btn" data-target="#viewdetails" data-toggle="modal" ng-click="viewDetails(product.id)">View Product Details</button>
+                                            <button class="btn-default btn-block btn" data-target="#editproductmodal" data-toggle="modal" ng-click="edit(product.id)">Edit Product</button>
+                                            <button class="btn-default btn-block btn" ng-click="delete(product.id)">Delete Product</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="additem">
+                                    <div class="modal fade" id="addproductmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">Add Product</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <form class="form-horizontal">
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">ID :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="id">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Image Url :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="imgurl">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 1 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="f1">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 2 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="f2">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 3 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="f3">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 4 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="f4">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 5 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="f5">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 6 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="f6">
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <form class="form-horizontal">
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 7 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="f7">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 8 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="f8">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 9 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="f9">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 10 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="f10">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 11 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="f11">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 12 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="f12">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 13 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="f13">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 14 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="f14">
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="add()">Add Product</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="edititem">
+                                    <div class="modal fade" id="editproductmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">Edit Product</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <form class="form-horizontal">
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">ID :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="eid" readonly disabled>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Image Url :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="eimgurl">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 1 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="ef1">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 2 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="ef2">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 3 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="ef3">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 4 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="ef4">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 5 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="ef5">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 6 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="ef6">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 7 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="ef7">
+                                                                    </div>
+                                                                </div>
+
+                                                            </form>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <form class="form-horizontal">
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 8 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="ef8">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 9 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="ef9">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 10 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="ef10">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 11 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="ef11">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 12 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="ef12">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 13 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="ef13">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="" class="col-sm-3 control-label">Field 14 :</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" ng-model="ef14">
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="saveEdit()">Save Changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="viewdetails">
+                                    <div class="modal fade" id="viewdetails" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">Product Details</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <div class="prd-image">
+                                                                <img ng-src="{{vimgurl}}" class="img-responsive" ng-model="vimgurl" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <ul class="nav">
+                                                                <li>Id :
+                                                                    <span ng-model="vid" ng-bind="vid"></span>
+                                                                </li>
+                                                                <li>Field 1 :
+                                                                    <span ng-model="vf1" ng-bind="vf1"></span>
+                                                                </li>
+                                                                <li>Field 2 :
+                                                                    <span ng-model="vf2" ng-bind="vf2"></span>
+                                                                </li>
+                                                                <li>Field 3 :
+                                                                    <span ng-model="vf3" ng-bind="vf3"></span>
+                                                                </li>
+                                                                <li>Field 4 :
+                                                                    <span ng-model="vf4" ng-bind="vf4"></span>
+                                                                </li>
+                                                                <li>Field 5 :
+                                                                    <span ng-model="vf5" ng-bind="vf5"></span>
+                                                                </li>
+                                                                <li>Field 6 :
+                                                                    <span ng-model="vf6" ng-bind="vf6"></span>
+                                                                </li>
+                                                                <li>Field 7 :
+                                                                    <span ng-model="vf7" ng-bind="vf7"></span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <ul class="nav">
+                                                                <li>Field 8 :
+                                                                    <span ng-model="vf8" ng-bind="vf8"></span>
+                                                                </li>
+                                                                <li>Field 9 :
+                                                                    <span ng-model="vf9" ng-bind="vf9"></span>
+                                                                </li>
+                                                                <li>Field 10 :
+                                                                    <span ng-model="vf10" ng-bind="vf10"></span>
+                                                                </li>
+                                                                <li>Field 11 :
+                                                                    <span ng-model="vf11" ng-bind="vf11"></span>
+                                                                </li>
+                                                                <li>Field 12 :
+                                                                    <span ng-model="vf12" ng-bind="vf12"></span>
+                                                                </li>
+                                                                <li>Field 13 :
+                                                                    <span ng-model="vf13" ng-bind="vf13"></span>
+                                                                </li>
+                                                                <li>Field 14 :
+                                                                    <span ng-model="vf14" ng-bind="vf14"></span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="menu1" class="tab-pane fade" ng-controller="categoryController">
+                            <div class="admin-category-control">
+                                <div class="admin-category-button mb-20">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <button class="btn btn-default btn-block" ng-click="categories.push({'category':''})">Add New Category</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button class="btn btn-primary btn-block" ng-click="saveScope()" ng-show="saveState">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <tr style="background-color: #ddd">
+                                                    <th>Category Name</th>
+                                                    <th>Category Fileds</th>
+                                                    <th>Category Controls</th>
+                                                    <th>Subcategories</th>
+                                                </tr>
+                                                <tr ng-repeat="cat in categories" class="border-btm">
+                                                    <td>
+                                                        <input type="text" ng-model="cat.category" ng-change="activateSave()" class="form-control mb-5" placeholder="Category Name"
+                                                        />
+                                                        <textarea name="" ng-model="cat.desc" class="form-control" ng-change="activateSave()" id="" cols="30" rows="6" placeholder="Add Description Here...."></textarea>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table-responsive">
+                                                            <table class="table" class="pad">
+                                                                <tr ng-repeat="field in cat.fields">
+                                                                    <td class="pr">
+                                                                        <input type="text" class="form-control" style="margin-bottom: 4px;" ng-model="field.field" ng-change="activateSave()">
+                                                                    </td>
+                                                                    <td class="pl">
+                                                                        <button class="btn btn-danger" ng-click="removeField(cat,$index)">X</button>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-danger btn-block" ng-click="removeItem($index)">Remove</button>
+                                                        <button class="btn btn-default btn-block" ng-if="cat.subcategories.length>0" ng-click="cat.subcategories.push({'subcategory':'',sets:[]})">Add More Subcategory</button>
+                                                        <button class="btn btn-default btn-block" ng-if="!cat.subcategories" ng-click="cat.subcategories=[{'subcategory':'',sets:[]}]">Add SubCategory</button>
+                                                        <button class="btn btn-default btn-block" ng-if="cat.fields.length>0" ng-click="cat.fields.push({'field':''})">Add More Field</button>
+                                                        <button class="btn btn-default btn-block" ng-if="!cat.fields" ng-click="cat.fields=[{'field':''}]">Add Field</button>
+                                                    </td>
+                                                    <td>
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <tr ng-repeat="sub in cat.subcategories">
+                                                                    <td class="pr w-50">
+                                                                        <input type="text" ng-model="sub.subcategory" ng-change="activateSave()" class="form-control" />
+                                                                        <div class="table-responsive">
+                                                                            <table class="table">
+                                                                                <tr ng-repeat="set in sub.sets">
+                                                                                    <td class="pr">
+                                                                                        <input type="text" ng-model="set.set" ng-change="activateSave()" class="form-control">
+                                                                                    </td>
+                                                                                    <td class="pl">
+                                                                                        <button class="btn btn-danger btn-block" ng-click="removeSet(sub,$index)">X</button>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="pl">
+                                                                        <div class="btn-group">
+                                                                            <button class="btn btn-danger" ng-click="removeSub(cat,$index)">X</button>
+                                                                            <button class="btn btn-default" ng-if="sub.sets" ng-click="sub.sets.push({'set':''})">Add Sets</button>
+                                                                        </div>
+                                                                    </td>
+
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <pre class="margin-top" style="font-size: 12px">{{ categories | json }}</pre>
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+                            <h3>Menu 2</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                                totam rem aperiam.</p>
+                        </div>
+                        <div id="menu3" class="tab-pane fade">
+                            <h3>Menu 3</h3>
+                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        </div>
+                        <div id="menu4" class="tab-pane fade">
+                            <h3>Menu 3</h3>
+                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        </div>
+                        <div id="menu5" class="tab-pane fade">
+                            <h3>Menu 4</h3>
+                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        </div>
+                        <div id="menu6" class="tab-pane fade">
+                            <h3>Menu 5</h3>
+                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        </div>
+                        <div id="menu7" class="tab-pane fade">
+                            <h3>Menu 6</h3>
+                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

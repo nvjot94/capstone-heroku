@@ -1,0 +1,579 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f1f3f6;
+    overflow-x: hidden !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+}
+
+.wsmobileheader .company-logo img {
+    padding-left: 50px;
+}
+
+.company-name a {
+    text-decoration: none;
+    color: white;
+}
+
+.comp-name {
+    padding: 18px 0px 0px 15px;
+    margin: 0;
+    float: left;
+    width: 13%;
+}
+
+.comp-name a {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.smallogo p {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin: 10px 20px 0px 0px;
+}
+
+@media(max-width:991px) {
+    .company-header {
+        display: none;
+    }
+}
+
+.company-name h4 {
+    margin-top: 7px;
+    font-weight: 700;
+    margin-right: 15px;
+    color: #0077e2;
+}
+
+@media(max-width:991px) {
+    .body-slider .carousel {
+        margin-top: 53px;
+    }
+    .body-slider .carousel .carousel-inner .item img {
+        min-height: 200px;
+        width: 100%;
+    }
+}
+
+.body-slider .carousel .carousel-inner .item img {
+    max-height: 400px;
+    min-height: 280px;
+    width: 100%;
+}
+
+.section-shadow {
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+}
+
+.section-spacing {
+    margin-bottom: 30px;
+}
+
+.wrapper{
+    width: 100%;
+}
+
+.wrapper .product-heading h2 {
+    font-weight: 600;
+    padding: 10px 0px;
+    display: inline-block;
+}
+
+.wrapper .product-heading a {
+    background-color: #0077e2;
+    color: white;
+    margin: 10px 10px 0 0;
+}
+
+.wrapper .product-wrapper a {
+    text-decoration: none;
+    color: black;
+}
+
+.wrapper .product-wrapper .product-details {
+    width: 95%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.wrapper .product-wrapper .product-details .product-desc {
+    margin-top: 20px;
+}
+
+.wrapper .product-wrapper .product-details .product-desc h3 {
+    font-weight: 500;
+}
+
+.wrapper .product-wrapper .product-details .product-desc p {
+    font-size: 16px;
+    color: #31a8e6;
+}
+
+#myFooter {
+    margin-top: 20px;
+    background-color: white;
+    color: white;
+}
+
+#myFooter .footer-copyright {
+    background-color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+#myFooter .footer-copyright p {
+    margin: 10px;
+    color: grey;
+}
+
+#myFooter ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+}
+
+#myFooter h5 {
+    font-size: 18px;
+    color: gray;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#myFooter a {
+    color: grey;
+    text-decoration: none;
+}
+
+#myFooter a:hover,
+#myFooter a:focus {
+    text-decoration: none;
+    color: black;
+}
+
+#myFooter .myCols {
+    text-align: center;
+}
+
+#myFooter .social-networks {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 38px;
+}
+
+#myFooter .social-networks a {
+    font-size: 32px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: grey;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+#myFooter .social-networks a:hover {
+    text-decoration: none;
+}
+
+#myFooter .facebook:hover {
+    color: #0077e2;
+}
+
+#myFooter .google:hover {
+    color: #ef1a1a;
+}
+
+#myFooter .twitter:hover {
+    color: #00aced;
+}
+
+#myFooter .instagram:hover {
+    color: orange;
+}
+
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+}
+
+.modal-body {
+    margin-top: 10px;
+}
+
+.modal-title {
+    color: white;
+}
+
+/* ==================================Login Form ================================ */
+
+.prm-color {
+    background-color: #5999ee;
+}
+
+.login-form input {
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    border-radius: 0px;
+}
+
+.modal-body .form-control:focus {
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+}
+
+.modal-body .form-control {
+    box-shadow: none;
+}
+
+.login-form button {
+    border-radius: 0px;
+    height: 40px;
+    background-color: #5999ee;
+    color: white;
+}
+
+.login-form .loginbtn:hover {
+    background-color: white;
+    border-color: #5999ee;
+}
+
+.login-form .loginbtn {
+    width: 100%;
+}
+
+.login-form a {
+    text-decoration: none;
+}
+
+.login-form .registerbtn {
+    width: 100%;
+    background-color: white;
+    border: 1px solid #5999ee;
+    color: black;
+}
+
+.login-form .registerbtn:hover {
+    background-color: #5999ee;
+    color: white;
+}
+
+.login-form a .fa-google,
+a .fa-facebook {
+    height: 50px;
+    width: 50px;
+    color: white;
+    background-color: #3b5998;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.login-form a .fa-google {
+    background-color: #db3236;
+}
+
+/* ==================================End of Login Form ================================ */
+
+/* ================================Start of Registration Form ========================= */
+
+.register-form input {
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.register-form .otp {
+    background-color: white;
+    color: black;
+    border-color: #5999ee;
+}
+
+.register-form .otp:hover {
+    background-color: #5999ee;
+    color: white;
+}
+
+.register-form button {
+    border-radius: 0px;
+    height: 40px;
+    background-color: #5999ee;
+    color: white;
+}
+
+.register-form .registerbtn:hover {
+    background-color: white;
+    border-color: #5999ee;
+}
+
+.register-form .registerbtn {
+    width: 100%;
+}
+
+/* ==============================End of Registration Form ======================== */
+
+/* ================================Start of ForgetPassword Form ========================= */
+
+.forgetpassword-form input {
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.forgetpassword-form .otp {
+    background-color: white;
+    color: black;
+    border-color: #5999ee;
+}
+
+.forgetpassword-form .otp:hover {
+    background-color: #5999ee;
+    color: white;
+}
+
+.forgetpassword-form button {
+    border-radius: 0px;
+    height: 40px;
+    background-color: #5999ee;
+    color: white;
+}
+
+.forgetpassword-form .submit:hover {
+    background-color: white;
+    border-color: #5999ee;
+}
+
+.forgetpassword-form .submit {
+    width: 100%;
+}
+
+/* ==============================End of ForgetPassword Form ======================== */
+
+/* ==============================Start Of Placeholder Animation ==================== */
+
+.modal-body .myinput {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.modal-body .myplaceholder {
+    position: absolute;
+    z-index: 1;
+    top: 6px;
+    left: 20px;
+    transition: 0.5s;
+    color: #0077e2;
+    font-size: 16px;
+}
+
+.focus .myplaceholder {
+    top: -20px;
+    left: 15px;
+    transition: 0.5s;
+    color: #0077e2;
+    font-size: 12px;
+}
+
+/* ==============================End Of Placeholder Animation ==================== */
+
+/* ==============================Start of Category Html=========================== */
+
+.wrapper .category-heading h2 {
+    font-weight: 600;
+    padding: 10px 0px;
+    display: inline-block;
+}
+
+.wrapper .category-heading .sortby {
+    color: black;
+    margin: 10px 10px 0 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.wrapper .category-heading .sortby p a {
+    color: grey;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/* ==============================End of Category Html=========================== */
+
+/* ==============================Start of Product Html=========================== */
+
+.body-content .filter-section {
+    background-color: white;
+    padding: 10px;
+}
+
+.body-content .filter-section h3 {
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    border-bottom: 1px solid lightgrey;
+}
+
+.body-content .filter-section .panel-group {
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.body-content .filter-section .panel-group .panel {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    box-shadow: none;
+    background-color: white;
+}
+
+.body-content .filter-section .panel-group .panel:first-child {
+    border-top: 1px solid lightgrey;
+}
+
+.body-content .filter-section .panel-group .panel:last-child {
+    border-bottom: none;
+}
+
+.body-content .filter-section .panel-heading .accordion-toggle:after {
+    font-family: 'FontAwesome';
+    content: "\f078";
+    float: right;
+}
+
+.body-content .filter-section .panel-heading .accordion-toggle.collapsed:after {
+    content: "\f054";
+}
+
+.body-content .filter-section .panel-group .panel-heading {
+    background-color: white;
+}
+
+.body-content .filter-section .panel-group .panel-heading .panel-title a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.body-content .filter-section .panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-top: none;
+}
+
+.body-content .filter-section .panel-group .panel-body .list-group .list-group-item {
+    border: none;
+    padding-left: 0;
+    background-color: white;
+}
+
+.body-content .filter-section .panel-group .panel-body .list-group .list-group-item:hover {
+    background: transparent;
+}
+
+.body-content .filter-section .panel-group .panel-body {
+    padding-top: 0px;
+}
+
+.body-content .product-screen a {
+    text-decoration: none;
+    color: black;
+}
+
+.body-content .product-screen .product-details {
+    background-color: white;
+    padding: 20px;
+    margin: 0 auto 20px;
+}
+
+.body-content .product-screen .product-details .product-img {
+    width: 98%;
+    margin: 0 auto;
+}
+
+.body-content .product-screen .product-details .product-desc ul {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+}
+
+.body-content .product-screen .product-details .product-desc ul li {
+    padding: 2px 0px;
+}
+
+.body-content .product-screen .product-details .product-desc ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.body-content .product-screen .product-details .product-desc h3 {
+    margin: 5px 0;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.body-content .product-screen .product-details .product-desc p {
+    font-size: 20px;
+    color: dimgrey;
+}
+
+/* ==============================End of Product Html=========================== */
+
+.paybtn
+{
+    background-color:#047BD5;
+    outline:none;
+    border:none;
+    cursor:pointer;
+    box-shadow: 0 6px #047BD5;
+    display:block;
+    padding: 20px 50px;
+    margin: 10px auto;
+    letter-spacing:2px;
+    position:relative;
+    text-transform:capitalize;
+    border-radius:25px;
+}
+.paybtn:hover
+{
+    box-shadow: 0 4px #047BD5;
+    top:2px;
+}
+.paybtn:active
+{
+    box-shadow: 0 0 #047BD5;
+    top:6px;
+}
+
+.anim{
+animation:fade-slide 1.5s forwards;
+}
+@keyframes fade-slide {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

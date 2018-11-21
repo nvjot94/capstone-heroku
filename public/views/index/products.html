@@ -1,0 +1,250 @@
+﻿<div class="body-slider section-shadow section-spacing">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item" ng-repeat="img in productdata.carouselurls" ng-class="{active:$index==0}">
+                <img ng-src="{{img}}" class="img-responsive" alt="...">
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" data-target="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" data-target="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="body-content">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="filter-section">
+                    <h3>Filter</h3>
+                    <div class="filter-categories">
+                        <div class="filter-price">
+                            <div class="range-slider">
+                                <input value="25000" min="0" max="120000" step="500" type="range" />
+                                <input value="50000" min="0" max="120000" step="500" type="range" />
+                                <svg width="100%" height="24">
+                                    <line x1="4" y1="0" x2="300" y2="0" stroke="#444" stroke-width="12" stroke-dasharray="1 28"></line>
+                                </svg>
+                                <span>Min
+                                    <input type="number" value="25000" min="0" max="120000" />
+                                    <input type="number" value="50000" min="0" max="120000" /> Max
+                                </span>
+                            </div>
+                        </div>
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne">BRANDS NAME</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div class="list-group" id="list1">
+                                            <a href="#" class="list-group-item">First item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Second item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Third item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">More item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Another
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo">COLOR</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="list-group" id="list1">
+                                            <a href="#" class="list-group-item">First item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Second item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Third item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">More item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Another
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree">SIZE</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="list-group" id="list1">
+                                            <a href="#" class="list-group-item">First item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Second item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Third item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">More item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Another
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapseFour">BRANDS NAME</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="list-group" id="list1">
+                                            <a href="#" class="list-group-item">First item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Second item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Third item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">More item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Another
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapseFive">COLOR</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFive" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="list-group" id="list1">
+                                            <a href="#" class="list-group-item">First item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Second item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Third item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">More item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Another
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapseSix">SIZE</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseSix" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="list-group" id="list1">
+                                            <a href="#" class="list-group-item">First item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Second item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Third item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">More item
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                            <a href="#" class="list-group-item">Another
+                                                <input type="checkbox" class="pull-right">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="product-screen">
+                    <div class="row">
+                        <div class="col-md-4" ng-repeat="item in productData | filter:{'name':searchbyname}">
+                            <a ng-href="/#chooseproduct/{{subcategory}}/{{item._id}}">
+                                <div class="product-details">
+                                    <div class="product-img">
+                                        <img ng-src="{{item.imgUrl}}" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="product-desc">
+                                        <h3 ng-bind="item.name"></h3>
+                                        <p>Price :
+                                            <span ng-bind="item.purchaseprice"></span>
+                                        </p>
+                                        <ul ng-repeat="desc in item.shortdescription">
+                                            <li>
+                                                <a href="#">{{desc}}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

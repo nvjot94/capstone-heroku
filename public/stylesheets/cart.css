@@ -1,0 +1,95 @@
+#cart {
+    margin-top: 20px;
+   width: 100%;
+}
+
+#cart h3 {
+    padding: 10px 10px;
+    margin-bottom: 0 !important;
+}
+
+#cart .cart-list {
+    background-color: white;
+}
+
+#cart .col-md-6 {
+    padding-top: 20px;
+}
+
+#cart .col-md-3:last-child {
+    padding-top: 20px;
+}
+
+#cart .product-name p {
+    font-weight: bold;
+}
+
+#cart .product-price p {
+    color: dimgray;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#cart .short-desc ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    list-style: none;
+}
+
+#cart .short-desc ul li {
+    display: inline-block;
+    font-weight: bold;
+}
+
+#cart .short-desc ul li span {
+    font-weight: normal;
+}
+
+#cart .short-desc ul li:after {
+    content: "\2758";
+    padding: 0px 5px;
+}
+
+#cart .short-desc ul li:last-child:after {
+    content: none;
+}
+
+#cart .in-stock p {
+    font-weight: bold;
+}
+
+#cart .in-stock p span {
+    font-weight: normal;
+}
+
+#cart .quantity input {
+    width: 100px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+#cart .remove-product a {
+    padding: 10px 0;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#cart .cart-product {
+    border-bottom: 1px solid #ddd;
+}
+
+#cart .total-price {
+    background-color: white;
+    padding: 20px 0;
+}
+
+#cart .total-price p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#cart .total-price p span:last-child {
+    font-weight: normal;
+}

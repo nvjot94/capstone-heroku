@@ -1,0 +1,107 @@
+<div class="admin-category-control">
+    <div class="admin-category-button mb-20">
+        <div class="row">
+            <div class="col-md-3">
+                <button class="btn btn-default btn-block" ng-click="categories.push(
+                    {
+                        'category':'',
+                        'fields':   [
+                                        {'field': 'name'},
+                                        {'field': 'shortdescription'},
+                                        {'field': 'description' }, 
+                                        {'field': 'purchaseprice'}, 
+                                        {'field': 'mrp'},
+                                        {'field': 'sellingprice' },
+                                        {'field': 'stock'}, 
+                                        {'field': 'brand'},
+                                        {'field': 'tax' },
+                                        {'field': 'maximumquantitylimit' }
+                                    ]
+                    })">Add New Category
+                </button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary btn-block" ng-click="saveScope()" ng-show="saveState">Save</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table">
+                    <tr style="background-color: #ddd">
+                        <th>Category Name</th>
+                        <th>Category Fields</th>
+                        <th>Category Controls</th>
+                        <th>Subcategories</th>
+                    </tr>
+                    <tr ng-repeat="cat in categories" class="border-btm">
+                        <td>
+                            <input type="text" ng-model="cat.category" ng-change="activateSave()" class="form-control mb-5" placeholder="Category Name"
+                            />
+                            <textarea name="" ng-model="cat.description" class="form-control" ng-change="activateSave()" id="" cols="30" rows="6" placeholder="Add Description Here...."></textarea>
+                            <form></form>
+                        </td>
+                        <td>
+                            <div class="table-responsive">
+                                <table class="table" class="pad">
+                                    <tr ng-repeat="field in cat.fields">
+                                        <td class="pr">
+                                            <input type="text" class="form-control" style="margin-bottom: 4px;" ng-model="field.field" ng-change="activateSave()">
+                                        </td>
+                                        <td class="pl">
+                                            <button class="btn btn-danger" ng-click="removeField(cat,$index)">X</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger btn-block" ng-click="removeItem($index)">Remove</button>
+                            <button class="btn btn-default btn-block" ng-if="cat.subcategories.length>0" ng-click="cat.subcategories.push(
+                                {'subcategory':'',
+                                sets:[
+                                { ' field ': 'desc'  }
+                                ]
+                            })">Add More Subcategory</button>
+                            <button class="btn btn-default btn-block" ng-if="!cat.subcategories" ng-click="cat.subcategories=[{'subcategory':'',sets:[]}]">Add SubCategory</button>
+                            <button class="btn btn-default btn-block" ng-if="cat.fields.length>0" ng-click="cat.fields.push({'field':''})">Add More Field</button>
+                            <button class="btn btn-default btn-block" ng-if="!cat.fields" ng-click="cat.fields=[{'field':''}]">Add Field</button>
+                        </td>
+                        <td>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr ng-repeat="sub in cat.subcategories">
+                                        <td class="pr w-50">
+                                            <input type="text" ng-model="sub.subcategory" ng-change="activateSave()" class="form-control" />
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <tr ng-repeat="set in sub.sets">
+                                                        <td class="pr">
+                                                            <input type="text" ng-model="set.field" ng-change="activateSave()" class="form-control">
+                                                        </td>
+                                                        <td class="pl">
+                                                            <button class="btn btn-danger btn-block" ng-click="removeSet(sub,$index)">X</button>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td class="pl">
+                                            <div class="btn-group">
+                                                <button class="btn btn-danger" ng-click="removeSub(cat,$index)">X</button>
+                                                <button class="btn btn-default" ng-if="sub.sets" ng-click="sub.sets.push({'set':''})">Add Sets</button>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <pre class="margin-top" style="font-size: 12px">{{ categories | json }}</pre> -->

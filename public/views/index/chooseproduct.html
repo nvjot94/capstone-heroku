@@ -1,0 +1,335 @@
+<div class="body-content choose-product">
+    <div id="product-case">
+        <div class="row">
+            <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
+                <div class="product-showcase clearfix">
+                    <div class="row">
+                        <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2">
+                            <div class="thumbs">
+                                <a ng-href="{{productData.imgUrl}}">
+                                    <img ng-src="{{productData.imgUrl}}" alt="">
+                                </a>
+                                <a href="phone/2.jpeg">
+                                    <img src="phone/2.jpeg" alt="">
+                                </a>
+                                <a href="phone/3.jpg">
+                                    <img src="phone/3.jpg" alt="">
+                                </a>
+                                <a href="phone/4.jpg">
+                                    <img src="phone/4.jpg" alt="">
+                                </a>
+                                <a href="phone/5.jpeg">
+                                    <img src="phone/5.jpeg" alt="">
+                                </a>
+                                <a href="phone/6.jpg">
+                                    <img src="phone/6.jpg" alt="">
+                                </a>
+                                <a href="phone/7.jpg">
+                                    <img src="phone/7.jpg" alt="">
+                                </a>
+                                <a href="phone/8.jpg">
+                                    <img src="phone/8.jpg" alt="">
+                                </a>
+                                <a href="phone/9.jpg">
+                                    <img src="phone/9.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-10 col-lg-10 col-sm-10">
+                            <div class="zoom">
+                                <div id="img-preview">
+                                    <img ng-src="{{productData.imgUrl}}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
+                <div id="product-info">
+                    <div class="product-name clearfix">
+                        <h4 class="pull-left">Product Name :</h4>
+                        <span ng-bind="productData.name"></span>
+                        <div class="checkbox pull-right">
+                            <label>
+                                <input type="checkbox" value=""> Compare
+                            </label>
+                        </div>
+                    </div>
+                    <p class="pull-left" >Product Id :</p>
+                    <span ng-bind="productData._id"></span>
+                    <p><span ng-bind="productData.stock"></span> In Stock</p>
+                    <p>Value % OFF </p>
+                    <div class="price-details clearfix">
+                        <p class="pull-left">Price :
+                            <span>12,000</span>
+                        </p>
+                        <p class="pull-left">MRP :
+                            <span>20,000</span>
+                        </p>
+                        <div class="checkbox pull-left">
+                            <label>
+                                <input type="checkbox" value=""> Including of All Taxes!
+                            </label>
+                        </div>
+                    </div>
+                    <div class="short-desc clearfix">
+                        <p class="pull-left">Short Description :</p>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam numquam, ipsum in nihil dolore
+                            dolores deleniti, tempore explicabo nemo laudantium inventore expedita a quasi voluptates provident
+                            voluptas, aperiam sunt quis.</span>
+                    </div>
+                    <!-- <div class="category bottom-space clearfix">
+                        <p class="pull-left">Category :</p>
+                        <select name="" id="input" class="form-control">
+                            <option value="">-- Select One --</option>
+                            <option value="">-- Select One --</option>
+                            <option value="">-- Select One --</option>
+                            <option value="">-- Select One --</option>
+                            <option value="">-- Select One --</option>
+                        </select>
+                    </div>
+                    <div class="sub-category bottom-space clearfix">
+                        <p class="pull-left">Sub-Category :</p>
+                        <select name="" id="input" class="form-control">
+                            <option value="">-- Select One --</option>
+                            <option value="">-- Select One --</option>
+                            <option value="">-- Select One --</option>
+                            <option value="">-- Select One --</option>
+                            <option value="">-- Select One --</option>
+                        </select>
+                    </div> -->
+                    <div class="varients clearfix">
+                        <p class="pull-left">Varients :</p>
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="phone/varient1.jpeg">
+                                    <img src="phone/varient1.jpeg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="phone/varient2.png">
+                                    <img src="phone/varient2.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="phone/varient3.jpg">
+                                    <img src="phone/varient3.jpg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="quant bottom-space clearfix">
+                        <p class="pull-left">Quantity :</p>
+                        <select name="" id="input" class="form-control pull-left">
+                            <option value="">-- Select One --</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary bottom-space" ng-click="addToCart()">Add to Cart</button>
+                    <button class="btn btn-primary bottom-space" ng-click="addToFav()">Add to wishList</button>
+                    <div class="product-full-details clearfix">
+                        <p class="pull-left"> Product Details :</p>
+                        <ul class="nav pull-left">
+                            <li>Lorem ipsum dolor sit amet, porro facilis.</li>
+                            <li>consectetur adipisicing elit.</li>
+                            <li> Ut delectus, aliquid enim alias quae voluptatibus,</li>
+                            <li>Voluptates nulla, illo necessitatibus delectus possimus.</li>
+                            <li>Repellendus, ex voluptatem blanditiis delectus repudiandae ut.</li>
+                            <li>Repellendus, ex voluptatem blanditiis delectus repudiandae ut.</li>
+                            <li>Repellendus, ex voluptatem blanditiis delectus repudiandae ut.</li>
+                            <li>Repellendus, ex voluptatem blanditiis delectus repudiandae ut.</li>
+                        </ul>
+                    </div>
+                    <div class="share-on clearfix">
+                        <p class="pull-left">Share On :</p>
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook-official"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="similar-product">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Similar Products</h3>
+                    <div id="carousel-id" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-id" data-slide-to="1"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="row text-center">
+                                    <div class="col-md-3">
+                                        <div class="similar-prod-desc">
+                                            <div class="similar-item-img">
+                                                <img ng-src="../images/memorycard.png" alt="">
+                                            </div>
+                                            <div class="similar-item-desc text-center">
+                                                <h4>Product Name</h4>
+                                                <p>Rs. 3000
+                                                    <span>30% Discount</span>
+                                                </p>
+                                                <p>Rating
+                                                    <span>4.5</span>
+                                                </p>
+                                                <button class="btn btn-primary">Add To Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="similar-prod-desc">
+                                            <div class="similar-item-img">
+                                                <img src="../images/ac.png" alt="">
+                                            </div>
+                                            <div class="similar-item-desc text-center">
+                                                <h4>Product Name</h4>
+                                                <p>Rs. 3000
+                                                    <span>30% Discount</span>
+                                                </p>
+                                                <p>Rating
+                                                    <span>4.5</span>
+                                                </p>
+                                                <button class="btn btn-primary">Add To Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="similar-prod-desc">
+                                            <div class="similar-item-img">
+                                                <img src="../images/camera.png" alt="">
+                                            </div>
+                                            <div class="similar-item-desc text-center">
+                                                <h4>Product Name</h4>
+                                                <p>Rs. 3000
+                                                    <span>30% Discount</span>
+                                                </p>
+                                                <p>Rating
+                                                    <span>4.5</span>
+                                                </p>
+                                                <button class="btn btn-primary">Add To Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="similar-prod-desc">
+                                            <div class="similar-item-img">
+                                                <img src="../images/laptop.png" alt="">
+                                            </div>
+                                            <div class="similar-item-desc text-center">
+                                                <h4>Product Name</h4>
+                                                <p>Rs. 3000
+                                                    <span>30% Discount</span>
+                                                </p>
+                                                <p>Rating
+                                                    <span>4.5</span>
+                                                </p>
+                                                <button class="btn btn-primary">Add To Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row text-center">
+                                    <div class="col-md-3">
+                                        <div class="similar-prod-desc">
+                                            <div class="similar-item-img">
+                                                <img src="../images/microwave.png" alt="">
+                                            </div>
+                                            <div class="similar-item-desc text-center">
+                                                <h4>Product Name</h4>
+                                                <p>Rs. 3000
+                                                    <span>30% Discount</span>
+                                                </p>
+                                                <p>Rating
+                                                    <span>4.5</span>
+                                                </p>
+                                                <button class="btn btn-primary">Add To Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="similar-prod-desc">
+                                            <div class="similar-item-img">
+                                                <img src="../images/mobile.png" alt="">
+                                            </div>
+                                            <div class="similar-item-desc text-center">
+                                                <h4>Product Name</h4>
+                                                <p>Rs. 3000
+                                                    <span>30% Discount</span>
+                                                </p>
+                                                <p>Rating
+                                                    <span>4.5</span>
+                                                </p>
+                                                <button class="btn btn-primary">Add To Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="similar-prod-desc">
+                                            <div class="similar-item-img">
+                                                <img src="../images/memorycard.png" alt="">
+                                            </div>
+                                            <div class="similar-item-desc text-center">
+                                                <h4>Product Name</h4>
+                                                <p>Rs. 3000
+                                                    <span>30% Discount</span>
+                                                </p>
+                                                <p>Rating
+                                                    <span>4.5</span>
+                                                </p>
+                                                <button class="btn btn-primary">Add To Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="similar-prod-desc">
+                                            <div class="similar-item-img">
+                                                <img src="../images/microwave.png" alt="">
+                                            </div>
+                                            <div class="similar-item-desc text-center">
+                                                <h4>Product Name</h4>
+                                                <p>Rs. 3000
+                                                    <span>30% Discount</span>
+                                                </p>
+                                                <p>Rating
+                                                    <span>4.5</span>
+                                                </p>
+                                                <button class="btn btn-primary">Add To Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control" data-target="#carousel-id" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" data-target="#carousel-id" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

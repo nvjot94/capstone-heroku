@@ -1,0 +1,33 @@
+{
+  "name": "sessionHandling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "postinstall": "bower install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "3.0.2",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "bower": "^1.8.2",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^1.4.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "jssha": "^2.3.1",
+    "mongoose": "^5.0.6",
+    "mongoose-auto-increment": "^5.0.1",
+    "mongoose-plugin-autoinc": "^1.1.9",
+    "multer": "1.1.0",
+    "nodemailer": "^4.4.2",
+    "passport": "^0.4.0",
+    "sendotp": "^1.2.8"
+  }
+}

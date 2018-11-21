@@ -1,0 +1,76 @@
+#myorders .container-fluid {
+    background-color: white;
+    padding: 0 10px;
+    margin: 20px 15px 0px;
+}
+
+#myorders h3 {
+    padding: 10px 0px 30px;
+    margin-bottom: 0 !important;
+}
+
+#myorders .order-id p span {
+    color: grey !important;
+}
+
+#myorders .delivery-info ul {
+    padding: 0;
+    list-style: none;
+}
+
+#myorders .delivery-info ul li {
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+#myorders .delivery-info ul li span {
+    font-weight: normal;
+}
+
+#myorders .myorder-spec p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#myorders .myorder-desc ul {
+    padding: 10px 0 0;
+    list-style: none;
+}
+
+#myorders .myorder-desc ul li {
+    font-weight: bold;
+    display: inline-block;
+}
+
+#myorders .myorder-desc ul li:after {
+    content: "\2758";
+    padding: 0px 5px;
+}
+
+#myorders .myorder-desc ul li:last-child:after {
+    content: none;
+}
+
+#myorders .myorder-desc ul li span {
+    font-weight: normal;
+}
+
+#myorders .invoice a {
+    padding: 10px 0px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#myorders .myorder-info {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+#myorders .myorder-info .col-md-6,
+.col-md-3 {
+    margin-bottom: 20px;
+}
+
+#myorders .no-margin {
+    margin-top: 0px !important;
+}

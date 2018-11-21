@@ -1,0 +1,366 @@
+{
+    "_id": "5a796bb68155ec0a8c09a3a4",
+    "categories": [{
+            "name": "Electronics",
+            "subcategories": [{
+                    "name": "Mobiles",
+                    "sets": [
+                        "Samsung",
+                        "Lenovo",
+                        "Apple",
+                        "Sony",
+                        "Motorola",
+                        "Google"
+                    ]
+                },
+                {
+                    "name": "laptop",
+                    "sets": [
+                        "Asus",
+                        "Lenovo",
+                        "Dell",
+                        "Apple",
+                        "HP"
+                    ]
+                },
+                {
+                    "name": "memory card",
+                    "sets": [
+                        "Sandisk",
+                        "Kingston",
+                        "Transcend",
+                        "Samsung",
+                        "Sony",
+                        "Strontium",
+                        "mi"
+                    ]
+                },
+                {
+                    "name": "hard disk",
+                    "sets": [
+                        "wastern digital",
+                        "Samsung",
+                        "transcend",
+                        "toshiba"
+                    ]
+                },
+                {
+                    "name": "headphone",
+                    "sets": [
+                        "sony",
+                        "bose",
+                        "jbl",
+                        "mi",
+                        "at&t",
+                        "soundlogic",
+                        "skullcandy",
+                        "acer"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Clothing",
+            "subcategories": [{
+                    "name": "men",
+                    "sets": [
+                        "shirt",
+                        "pant",
+                        "tshirt"
+                    ]
+                },
+                {
+                    "name": "women",
+                    "sets": [
+                        "women shirt",
+                        "women trouser",
+                        "women tshirts"
+                    ]
+                },
+                {
+                    "name": "baby",
+                    "sets": [
+                        "upper",
+                        "lower",
+                        "shoes"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Footwear",
+            "subcategories": [{
+                    "name": "shoes",
+                    "sets": [
+                        "running",
+                        "sports",
+                        "canvas",
+                        "partywear"
+                    ]
+                },
+                {
+                    "name": "slippers",
+                    "sets": [
+                        "running slippers",
+                        "sports slipper",
+                        "canvas slipper",
+                        "bathroom slippers"
+                    ]
+                },
+                {
+                    "name": "sandals",
+                    "sets": [
+                        "running sandals",
+                        "sports sandals",
+                        "canvas sandals",
+                        "partywear sandal"
+                    ]
+                },
+                {
+                    "name": "steletoes",
+                    "sets": [
+                        "running steletoes",
+                        "sports steletoes",
+                        "canvas steletoes",
+                        "partywear steletoes"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Furniture",
+            "subcategories": [{
+                    "name": "table",
+                    "sets": [
+                        "party table",
+                        "study table",
+                        "dining table",
+                        "side table"
+                    ]
+                },
+                {
+                    "name": "chair",
+                    "sets": [
+                        "study chair",
+                        "computer chair",
+                        "dining chair",
+                        "party chair"
+                    ]
+                },
+                {
+                    "name": "sofa",
+                    "sets": [
+                        "home",
+                        "party halls",
+                        "2 seater",
+                        "4 seater"
+                    ]
+                },
+                {
+                    "name": "almirah",
+                    "sets": [
+                        "cupboards",
+                        "fixed",
+                        "portable",
+                        "ready to fit"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Books",
+            "subcategories": [{
+                    "name": "novels",
+                    "sets": [
+                        "entertainment",
+                        "thriller",
+                        "moral",
+                        "best selling"
+                    ]
+                },
+                {
+                    "name": "education",
+                    "sets": [
+                        "reference",
+                        "text",
+                        "best authors",
+                        "most selling"
+                    ]
+                },
+                {
+                    "name": "exam preparation",
+                    "sets": [
+                        "engineering entrance",
+                        "medical",
+                        "government jobs",
+                        "literature exams"
+                    ]
+                },
+                {
+                    "name": "aptitude and others",
+                    "sets": [
+                        "logical reasoning",
+                        "qauntitative reasoning",
+                        "qualitative reasoning",
+                        "mathematical"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sports",
+            "subcategories": [{
+                    "name": "cricket",
+                    "sets": [
+                        "bat",
+                        "cricket ball",
+                        "wicket",
+                        "helmet",
+                        "gloves",
+                        "watch"
+                    ]
+                },
+                {
+                    "name": "tennis",
+                    "sets": [
+                        "racket",
+                        "net",
+                        "tennis ball",
+                        "hand towels"
+                    ]
+                },
+                {
+                    "name": "football",
+                    "sets": [
+                        "shoes",
+                        "tshirts",
+                        "team flags",
+                        "whistle",
+                        "football",
+                        "stopwatch"
+                    ]
+                },
+                {
+                    "name": "tabletennis",
+                    "sets": [
+                        "tabletnnisball",
+                        "racket",
+                        "net",
+                        "table"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Toys",
+            "subcategories": [{
+                    "name": "remote control",
+                    "sets": [
+                        "helicopter",
+                        "quadcopter",
+                        "plane",
+                        "car",
+                        "train"
+                    ]
+                },
+                {
+                    "name": "educational",
+                    "sets": [
+                        "eBook",
+                        "magnetic slate",
+                        "learning tablet",
+                        "arduino circuit",
+                        "business",
+                        "monopoly"
+                    ]
+                },
+                {
+                    "name": "soft toys",
+                    "sets": [
+                        "donald duck",
+                        "mickey mouse",
+                        "teddy bear",
+                        "doraemon",
+                        "chhotta bheem",
+                        "shinchan",
+                        "pokemon"
+                    ]
+                },
+                {
+                    "name": "puzzles",
+                    "sets": [
+                        "color cube",
+                        "mirror cube",
+                        "chess",
+                        "picture puzzle",
+                        "mechanics"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Home Appliances",
+            "subcategories": [{
+                    "name": "television",
+                    "sets": [
+                        "Sony",
+                        "lG",
+                        "Samsung",
+                        "Toshiba",
+                        "Onida"
+                    ]
+                },
+                {
+                    "name": "refrigerators",
+                    "sets": [
+                        "LG",
+                        "Samsung",
+                        "Haier",
+                        "Huawei",
+                        "abcd"
+                    ]
+                },
+                {
+                    "name": "washing machine",
+                    "sets": [
+                        "Panasonic",
+                        "Godrej",
+                        "LG",
+                        "Samsung",
+                        "Haier",
+                        "IFB",
+                        "Bosch"
+                    ]
+                },
+                {
+                    "name": "ovens",
+                    "sets": [
+                        "microwaves",
+                        "heating oven",
+                        "grilling ovens",
+                        "multifeature ovens"
+                    ]
+                },
+                {
+                    "name": "water purifier",
+                    "sets": [
+                        "Kent",
+                        "aquaguard",
+                        "livpure",
+                        "Lg",
+                        "Bluestar"
+                    ]
+                },
+                {
+                    "name": "air purifier",
+                    "sets": [
+                        "LG",
+                        "Samsung",
+                        "Kent",
+                        "Eveready"
+                    ]
+                }
+            ]
+        }
+    ]
+}
